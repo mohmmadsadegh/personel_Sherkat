@@ -83,7 +83,7 @@ class moshtari(person):
         self.companys.append(company)    
     def Show_company(self):
         for item in self.companys:
-            print(f"{item.name} {item.place} {item.kala} {item.price}")    
+            print(f" company:{item.name} {item.place} {item.kala} {item.price}$")    
 class Tamin(person):
     mavad_Avaliye=''
     price_mavad_avaliye=0
@@ -121,17 +121,17 @@ class Hesabdari(person):
         self.Moshtariyan.append(moshtari)    
     def Show_Moshtari(self):
         for item in self.Moshtariyan:        
-            print(f"{item.name} {item.famili} {item.kala} {item.number_kala} {item.price}")    
+            print(f" list moshtariyan: {item.name} {item.famili} kalay sefareshi shoma {item.kala}  mibashad va tedad kala  {item.number_kala} addad mibashad ba ghimat {item.price}$")    
     def Add_taminkonande(self,taminkonande):
         self.Taminkonandegan.append(taminkonande) 
     def Show_taminkonande(self):
         for item in self.Taminkonandegan:
-            print(f"{item.name} {item.mavad_Avaliye} {item.price_mavad_avaliye} {item.tahvil}")                       
+            print(f" list taminkonandegan: {item.name} tahiye shode az  {item.mavad_Avaliye} ba ghimat {item.price_mavad_avaliye}$ dar  {item.tahvil}")                       
     def Add_personel(self,personel):
         self.personels.append(personel) 
     def Show_personel(self):
         for item in self.personels:
-            print(f"{item.name} {item.famili} {item.takhasos}")                             
+            print(f" list personel:  {item.name}  {item.famili} {item.takhasos}")                             
     
 class Boss_company(person):
     takhasos=""
@@ -154,17 +154,17 @@ class Boss_company(person):
         self.Moshtariyan.append(moshtari)
     def Show_Moshtari(self):
         for item in self.Moshtariyan:        
-            print(f"{item.name} {item.famili} {item.kala} {item.number_kala} {item.price}")    
+            print(f" list moshtariyan: {item.name} {item.famili} kalay sefareshi shoma {item.kala} mibashad ba tedad sefaresh {item.number_kala} addad ba ghimat {item.price}$")    
     def Add_taminkonande(self,taminkonande):
         self.Taminkonandegan.append(taminkonande) 
     def Show_taminkonande(self):
         for item in self.Taminkonandegan:
-            print(f"{item.name} {item.mavad_Avaliye} {item.price_mavad_avaliye} {item.tahvil}")         
+            print(f" list taminkonandegan: {item.name} tahiye shode az  {item.mavad_Avaliye} ba ghimat  {item.price_mavad_avaliye}$ dar {item.tahvil}")         
     def Add_personel(self,personel):
         self.personels.append(personel) 
     def Show_personel(self):
         for item in self.personels:
-            print(f"{item.name} {item.famili} {item.takhasos}")                             
+            print(f" list personel: {item.name} {item.famili} {item.takhasos}")                             
 # companyنمونه گیری از کلاس         
 company1=company("samsung","south korea","mobile & pc ",8500,123456)    
 company2=company("xiaomi","china","mobile & pc ",7500,123456)    
@@ -185,8 +185,8 @@ moshtari3=moshtari("bijan","mortazavi","consol",1200,1)
 moshtari4=moshtari("bayram","bagali","consol",1200,1)
 moshtari5=moshtari("amirmansor","pashazade","pc",800,1)
 # taminنمونه گیری از کلاس 
-Tamin1=Tamin("app_Stor","game",15,"haman lahze")
-Tamin2=Tamin("google play","game",15,"haman lahze")
+Tamin1=Tamin("app_Stor","vscode",15,"haman lahze")
+Tamin2=Tamin("google play","pycharm",15,"haman lahze")
 Tamin3=Tamin("mayket","software",15,"haman lahze")
 Tamin4=Tamin("netfilx","film",185,"haman lahze")
 # hesabdarنمونه گیری از کلاس 
