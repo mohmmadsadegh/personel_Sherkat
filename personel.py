@@ -60,7 +60,8 @@ class company:
         for item in self.Taminkonandegan:
             print(f"""
                   list taminkonandegan  **{item.name}**  tahiye shode az 
-                  **{item.mavad_Avaliye}**  ba ghimate **{item.price_mavad_avaliye}$**  
+                  **{item.mavad_Avaliye}**  ba ghimate 
+                  **{item.price_mavad_avaliye}$**  
                   ba tahvil **{item.tahvil}** {item.sabeghKifary}""")
 
     def Add_personel(self, personel):
@@ -92,9 +93,9 @@ class personel(person):
         self.dastmozd = dastmozd
         self._sabeghKifary = sabeghKifary
 
-    @property
+    @property        
     def saatkar(self):
-        return f"{self._saatkar} saat dar rooz kar mikonad "
+        return f"{self._saatkar} dar rooz kar anjam midahad"
 
     
     @saatkar.setter
@@ -105,15 +106,17 @@ class personel(person):
             self._saatkar = value
 
     @property
+    
     def sabeghKifary(self):
-        return f" sabegh keyfari shoma {self._sabeghKifary} is "
+        return f" {self._sabeghKifary}  "
 
     @sabeghKifary.setter
+    
     def sabeghKifary(self, value):
         if value != False:
-            self._sabeghKifary = value
+            self._sabeghKifary = " be elat dashtan soo sabegh ghader be hamkari ba shoma nistim "
         else:
-            self._sabeghKifary = 0
+            self._sabeghKifary = "az hamkari ba shoma khorsandim"
 
 
 class moshtari(person):
