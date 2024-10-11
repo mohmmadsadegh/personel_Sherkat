@@ -62,7 +62,8 @@ class company:
                   list taminkonandegan  **{item.name}**  tahiye shode az 
                   **{item.mavad_Avaliye}**  ba ghimate 
                   **{item.price_mavad_avaliye}$**  
-                  ba tahvil **{item.tahvil}** {item.sabeghKifary}""")
+                  ba tahvil **{item.tahvil}**
+                  **{item.sabeghKifary}**""")
 
     def Add_personel(self, personel):
         self.personels.append(personel)
@@ -95,7 +96,7 @@ class personel(person):
 
     @property        
     def saatkar(self):
-        return f"{self._saatkar} dar rooz kar anjam midahad"
+        return f"{self._saatkar} saat dar rooz kar anjam midahad"
 
     
     @saatkar.setter
@@ -113,7 +114,7 @@ class personel(person):
     @sabeghKifary.setter
     
     def sabeghKifary(self, value):
-        if value != False:
+        if value != False or value != False:
             self._sabeghKifary = " be elat dashtan soo sabegh ghader be hamkari ba shoma nistim "
         else:
             self._sabeghKifary = "az hamkari ba shoma khorsandim"
@@ -208,7 +209,8 @@ class Hesabdari(person):
             print(f""" 
                   list moshtariyan: **{item.name}**  **{item.famili}**
                   kalay sefareshi shoma **{item.kala}**  mibashad va tedad kala
-                **{item.number_kala}** addad mibashad ba ghimat **{item.price}$** **{item.bedehi}**""")
+                **{item.number_kala}** addad mibashad ba ghimat
+                **{item.price}$** **{item.bedehi}**""")
 
     def Add_taminkonande(self, taminkonande):
         self.Taminkonandegan.append(taminkonande)
@@ -227,7 +229,8 @@ class Hesabdari(person):
         for item in self.personels:
             print(f"""
                   list personel:  **{item.name}**  **{item.famili}**
-                **{item.takhasos}**  **{item.saatKar}**  **{item.sabeghKifary}**""")
+                **{item.takhasos}**  **{item.saatkar}** 
+                **{item.sabeghKifary}**""")
 
 
 class Boss_company(person):
@@ -257,7 +260,8 @@ class Boss_company(person):
             print(f""" 
                   list moshtariyan: **{item.name}**  **{item.famili}**
                   kalay sefareshi shoma **{item.kala}**  mibashad va tedad kala
-                **{item.number_kala}** addad mibashad ba ghimat **{item.price}$** **{item.bedehi}**""")     
+                **{item.number_kala}** addad mibashad ba ghimat
+                **{item.price}$** **{item.bedehi}**""")     
 
     def Add_taminkonande(self, taminkonande):
         self.Taminkonandegan.append(taminkonande)
@@ -276,7 +280,8 @@ class Boss_company(person):
         for item in self.personels:
             print(f""" 
                   list personel: **{item.name}**  **{item.famili}**
-                **{item.takhasos}**  **{item.saatKar}** **{item.sabeghKifary}**""")
+                **{item.takhasos}**  **{item.saatkar}**
+                **{item.sabeghKifary}**""")
 
 
 # companyنمونه گیری از کلاس
@@ -290,11 +295,11 @@ company5 = company(
 company6 = company("pixel", "usa", "mobile", 9000, 123456)
 # personelنمونه گیری از کلاس
 personel1 = personel("mark", "zakerberg", "Boss", 8, 5000000000, False)
-personel1.saatKar = 8
+personel1.saatKar = 9
 personel1.sabeghKifary = False
 personel2 = personel("emma", "zilinski", "secretary", 10, 4200, False)
 personel2.saatKar = 10
-personel2.sabeghKifary = 1
+personel2.sabeghKifary = 0
 personel3 = personel("edmond", "mikhtariyan", "driver", 12, 4500, False)
 personel3.sabeghKifary = True
 personel3.saatKar = 12
