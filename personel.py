@@ -96,7 +96,7 @@ class personel(person):
 
     @property        
     def saatkar(self):
-        return f"{self._saatkar} saat dar rooz kar anjam midahad"
+        return f"{self._saatkar} saat dar rooz kar  anjam midahad"
 
     
     @saatkar.setter
